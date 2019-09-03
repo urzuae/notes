@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row pt-4">
+      <div class="col-4 shadow p-3 mb-5 bg-white rounded">
+        <section id="breadcrumbs">
+          / <%= image_tag "folder.png", size: "20x20" %> root
+          <%= render "folders/index", folders: @folders %>
+        </section>
+
+        <div>
+          <%= render "folders/form", current_folder: @current_folder %>
+        </div>
+      </div>
+
+      <div class="col-7 offset-1 shadow p-3 mb-5 bg-white rounded">
+        <section id="list">
+          <%= render "notes/index", notes: @notes %>
+        </section>
+
+        <div>
+          <%= render "notes/form", current_folder: @current_folder %>
+        </div>
+      </div>
+  </div>
+</div>

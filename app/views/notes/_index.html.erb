@@ -1,0 +1,9 @@
+<div class="row">
+<% notes.each do |note| %>
+  <div class="col-4">
+  	<%= link_to note do %>
+  	  <%= image_tag "file.png", size: "20x20" %><%= note.name %>
+  	<% end %>
+  </div>
+<% end %>
+</div>

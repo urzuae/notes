@@ -1,0 +1,14 @@
+<div>
+<h4>New Note</h4>
+<%= form_for Note.new do |f| %>
+  <%= f.label :name, "Note Title: " %>
+  <%= f.text_field :name, placeholder: "Title", class: "form-control" %>
+
+  <%= f.label :content, "Conent: " %>
+  <%= f.text_area :content, class: "form-control" %>
+
+  <%= f.hidden_field :folder_id, value: current_folder&.id %>
+  <br>
+  <%= submit_tag "Create Note", class: 'btn' %>
+<% end %>
+</div>

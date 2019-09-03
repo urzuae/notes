@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 shadow-sm p-3 mb-5 bg-white rounded">
+      <section id="breadcrumbs">
+        <% if @folder.nil? %>
+          <%= image_tag "folder.png", size: "20x20" %>
+          <%= link_to 'root', root_path %>
+        <% else %>
+          <% @folder.get_parents.each do |parent| %>
+            / <%= link_to parent[:name], parent[:url] %>
+          <% end %>
+          / <%= @folder.name %>
+        <% end %>
+      </section>
+    </div>
+    <div class="col-12 shadow p-3 mb-5 bg-white rounded">
+      <h2 class="title"><%= image_tag "file.png", size: "30x30" %><%= @note.name %></h2>
+      <div><%= @note.content %></div>
+    </div>
+  </div>
+</div>
