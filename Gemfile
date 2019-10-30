@@ -29,7 +29,7 @@ gem 'turbolinks', '~> 5'
 gem "dotenv-rails"
 
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'sprockets-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
